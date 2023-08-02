@@ -1,0 +1,11 @@
+.header__wrapper {
+    margin: 0 auto 0 auto;
+    width: 80%;
+}
+
+@media (min-width: 980px) {
+    .header__wrapper {
+        margin: 0;
+        width: 880px;
+    }
+}

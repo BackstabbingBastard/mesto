@@ -1,0 +1,16 @@
+.body {
+    width: 100%;
+    background-color: #000000;
+}
+
+@media (min-width: 320px) {
+    .body {
+        padding-top: 28px;
+    }
+}
+
+@media (min-width: 980px) {
+    .body {
+        padding-top: 45px;
+    }
+}

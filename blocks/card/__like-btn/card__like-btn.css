@@ -1,0 +1,13 @@
+.card__like-btn {
+    background-image: url(../../../images/vectors/like.svg);
+    background-color: transparent;
+    min-width: 22px;
+    min-height: 19px;
+    border-style: none;
+}
+
+.card__like-btn:hover {
+    background-image: url(../../../images/vectors/likehover.svg);
+    cursor: pointer;
+    
+}

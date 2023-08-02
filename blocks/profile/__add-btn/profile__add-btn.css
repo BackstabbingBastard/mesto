@@ -1,0 +1,29 @@
+.profile__add-btn {
+    /* background: url(../../../images/vectors/plussmall.svg) no-repeat #000; */
+    outline: none;
+    cursor: pointer;
+    margin: 0 0 0 auto;
+}
+
+@media (min-width: 320px) {
+    .profile__add-btn {
+        width: 282px;
+        height: 50px;
+        border: 2px solid #fff;
+        box-sizing: border-box;
+        border-radius: 2px;
+        background: url(../../../images/vectors/plussmall.svg) no-repeat 50%/22px 22px #000;
+        outline: none;
+        transition: all .1s linear;
+        margin-top: 5px;
+    }
+}
+
+@media (min-width: 980px) {
+    .profile__add-btn {
+        margin-top: 0px;
+        width: 150px;
+        background-size: auto;
+    }
+}
+

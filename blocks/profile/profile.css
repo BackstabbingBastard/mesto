@@ -1,0 +1,23 @@
+.profile {
+    display: flex;
+    color: white;
+    align-items: center;
+}
+
+@media (min-width: 320px) {
+    .profile {
+        gap: 25px;
+        padding-top: 41px;
+        width: 100%;
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 980px) {
+    .profile {
+        gap: 30px;
+        width: 880px;
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+}

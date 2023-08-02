@@ -1,0 +1,20 @@
+.header {
+    /* display: flex;
+    flex-direction: column;
+    gap: 36px; */
+    /* align-self: flex-start; */
+}
+
+@media (min-width: 320px) {
+    .header {
+        width: 100%;
+    }
+}
+
+
+@media (min-width: 980px) {
+    .header {
+        width: 880px;
+        align-self: center;
+    }
+}
