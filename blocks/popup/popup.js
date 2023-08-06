@@ -3,5 +3,5 @@ let popup = document.querySelector('.popup');
 // let popupClosebtn = document.querySelector('.popup__close-btn');
 
 function togglePopup() {
-    popup.classList.toggle("popup_opened");
+    popup.classList.toggle('popup_opened');
 };

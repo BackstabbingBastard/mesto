@@ -5,8 +5,10 @@
     font-weight: 400;
     line-height: normal;
     width: 100%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
-
 
 @media (min-width: 320px) {
     .profile__description  {

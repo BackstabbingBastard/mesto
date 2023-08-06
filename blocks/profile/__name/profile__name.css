@@ -5,6 +5,9 @@
     margin: 2px 0 0 0;
     align-self: center;
     line-height: 48px; 
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 @media (min-width: 320px) {
@@ -18,6 +21,7 @@
 
 @media (min-width: 980px) {
     .profile__name {
+        text-align: left;
         font-size: 42px;
         text-align: auto;
     }
