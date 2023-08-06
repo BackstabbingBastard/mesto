@@ -2,9 +2,24 @@
     position: relative;
     box-sizing: border-box;
     background-color: white;
+    transition: all .4s linear;
+    border-radius: 10px;
+}
+
+@media (min-width: 980px) {
+    .popup__container { 
+        width: 282px;
+        height: 322px;
+        padding: 25px 22px 25px 22px;
+    }
+}
+
+
+
+
+@media (min-width: 980px) {
+.popup__container {
     padding: 34px 36px 37px 36px;
     width: 430px;
     height: 330px;
-    border-radius: 10px;
-    transition: all .4s linear;
-}
+}}
