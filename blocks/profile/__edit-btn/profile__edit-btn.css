@@ -8,6 +8,11 @@
     height: 24px;
 }
 
+.profile__edit-btn:hover {
+    cursor: pointer;
+    opacity: 0.6;
+}
+
 @media (min-width: 320px) {
     .profile__edit-btn  {
         min-width: 18px;

@@ -1,6 +1,5 @@
 .cards {
     margin: 0 auto 0 auto;
-    padding-top: 50px;
     display: grid;
     gap: 17px;
     grid-row-gap: 20px;
@@ -9,11 +8,20 @@
 @media (min-width: 320px) {
     .cards {
          grid-template-columns: 1fr;
+         padding-top: 36px;
+    }
+}
+
+@media (min-width: 600px) {
+    .cards {
+         grid-template-columns: 1fr 1fr;
+         padding-top: 36px;
     }
 }
 
 @media (min-width: 980px) {
     .cards {
+        padding-top: 50px;
         grid-template-columns: 282px 282px 282px;
         grid-template-rows: 361px 361px;
     }

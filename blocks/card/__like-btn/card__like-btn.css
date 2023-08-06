@@ -11,3 +11,15 @@
     cursor: pointer;
     
 }
+
+@media (min-width: 320px) {
+    .card__like-btn  {
+        margin-right: 4px;
+    }
+}
+
+@media (min-width: 980px) {
+    .card__like-btn  {
+        margin-right: 0;
+    }
+}
