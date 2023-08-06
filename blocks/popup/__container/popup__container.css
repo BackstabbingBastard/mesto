@@ -6,16 +6,13 @@
     border-radius: 10px;
 }
 
-@media (min-width: 980px) {
+@media (min-width: 320px) {
     .popup__container { 
         width: 282px;
         height: 322px;
         padding: 25px 22px 25px 22px;
     }
 }
-
-
-
 
 @media (min-width: 980px) {
 .popup__container {
