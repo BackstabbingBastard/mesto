@@ -7,7 +7,7 @@
 }
 
 @media (min-width: 320px) {
-    .popup__container { 
+    .popup__container {
         width: 282px;
         height: 322px;
         padding: 25px 22px 25px 22px;
@@ -15,8 +15,9 @@
 }
 
 @media (min-width: 980px) {
-.popup__container {
-    padding: 34px 36px 37px 36px;
-    width: 430px;
-    height: 330px;
-}}
+    .popup__container {
+        padding: 34px 36px 37px 36px;
+        width: 430px;
+        height: 330px;
+    }
+}

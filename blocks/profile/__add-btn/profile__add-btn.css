@@ -1,5 +1,4 @@
 .profile__add-btn {
-    /* background: url(../../../images/vectors/plussmall.svg) no-repeat #000; */
     outline: none;
     cursor: pointer;
 }
@@ -36,4 +35,3 @@
         margin: 0 0 0 auto;
     }
 }
-
