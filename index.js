@@ -1,8 +1,11 @@
-// Находим форму в DOM
+let popup = document.querySelector('.popup');
 let formElement =  document.querySelector('.popup__container'); // Воспользуйтесь методом querySelector()
-// Находим поля формы в DOM
 let nameInput = document.querySelector('.profile__name'); // Воспользуйтесь инструментом .querySelector()
 let jobInput = document.querySelector('.profile__description')// Воспользуйтесь инструментом .querySelector()
+
+function togglePopup() {
+    popup.classList.toggle('popup_opened');
+};
 
 // Обработчик «отправки» формы, хотя пока
 // она никуда отправляться не будет
@@ -14,9 +17,7 @@ function handleFormSubmit (evt) {
     // Выберите элементы, куда должны быть вставлены значения полей
     // Вставьте новые значения с помощью textContent
     nameInput.textContent = document.querySelector('.popup__name').value;
-    jobInput.textContent = document.querySelector('.popup__description').value;
-
-    
+    jobInput.textContent = document.querySelector('.popup__description').value;   
 }
 
 // Прикрепляем обработчик к форме:

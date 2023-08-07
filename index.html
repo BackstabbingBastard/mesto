@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Mesto</title>
     <link rel="stylesheet" href="./pages/index.css">
 </head>
 
@@ -12,8 +12,8 @@
     <div class="page">
         <header class="header">
             <div class="header__wrapper">
-                <a href="index.html" class="link"><img src="./images/vectors/vector.svg"
-                    alt="Лого с надписью Место" class="header__logo"></a>
+                <a href="index.html" class="link"><img src="./images/vectors/vector.svg" alt="Лого с надписью Место"
+                        class="header__logo"></a>
             </div>
             <div class="header__line"></div>
         </header>
@@ -22,57 +22,58 @@
             <section class="profile">
                 <img src="./images/profile/avatar.png" alt="Аватар пользователя" class="avatar profile__avatar">
                 <div class="profile__info">
-                            <p class="profile__name">Жак-Ив Кусто</p>
-                            <button class="profile__edit-btn" type="button" onclick="togglePopup()"></button>
-                        <p class="profile__description">Исследователь океана</p>      
+                    <h1 class="profile__name">Жак-Ив Кусто</h1>
+                    <button class="profile__edit-btn" type="button" onclick="togglePopup()"></button>
+                    <p class="profile__description">Исследователь океана</p>
                 </div>
                 <button class="profile__add-btn" type="button"></button>
             </section>
 
             <section class="cards">
                 <div class="card">
-                    <img src="./images/cards/kirill-pershin-1088404-unsplash.jpg" alt="" class="card__img">
+                    <img src="./images/cards/kirill-pershin-1088404-unsplash.jpg" alt="Заброшенная часовня, поросшая мхом" class="card__img">
                     <div class="card__wrapper">
                         <h2 class="card__header">Карачаевск</h2>
                         <button class="card__like-btn"></button>
                     </div>
                 </div>
                 <div class="card">
-                    <img src="./images/cards/kirill-pershin-1404681-unsplash.png" alt="" class="card__img">
+                    <img src="./images/cards/kirill-pershin-1404681-unsplash.png" alt="Гора в тумане на дальнем плане" class="card__img">
                     <div class="card__wrapper">
                         <h2 class="card__header">Гора Эльбрус</h2>
                         <button class="card__like-btn"></button>
                     </div>
                 </div>
                 <div class="card">
-                    <img src="./images/cards/kirill-pershin-1556355-unsplash.png" alt="" class="card__img">
+                    <img src="./images/cards/kirill-pershin-1556355-unsplash.png" alt="Лес на передем плане, горы на заднем" class="card__img">
                     <div class="card__wrapper">
                         <h2 class="card__header">Домбай</h2>
                         <button class="card__like-btn"></button>
                     </div>
                 </div>
                 <div class="card">
-                    <img src="./images/cards/kirill-pershin-1404681-unsplash.png" alt="" class="card__img">
+                    <img src="./images/cards/kirill-pershin-1404681-unsplash.png" alt="Гора в тумане на дальнем плане" class="card__img">
                     <div class="card__wrapper">
                         <h2 class="card__header">Гора Эльбрус</h2>
                         <button class="card__like-btn"></button>
                     </div>
                 </div>
                 <div class="card">
-                    <img src="./images/cards/kirill-pershin-1556355-unsplash.png" alt="" class="card__img">
+                    <img src="./images/cards/kirill-pershin-1556355-unsplash.png" alt="Лес на передем плане, горы на заднем" class="card__img">
                     <div class="card__wrapper">
                         <h2 class="card__header">Домбай</h2>
                         <button class="card__like-btn"></button>
                     </div>
                 </div>
                 <div class="card">
-                    <img src="./images/cards/kirill-pershin-1088404-unsplash.jpg" class="card__img">
+                    <img src="./images/cards/kirill-pershin-1088404-unsplash.jpg" alt="Заброшенная часовня, поросшая мхом" class="card__img">
                     <div class="card__wrapper">
                         <h2 class="card__header">Карачаево-Черкессия</h2>
                         <button class="card__like-btn"></button>
                     </div>
                 </div>
-            </section> 
+            </section>
+
             <footer class="footer">
                 <p class="footer__copyright">© 2023 Mesto Russia</p>
             </footer>
@@ -89,7 +90,7 @@
         </form>
     </div>
 
-<script src="/blocks/popup/popup.js"></script>
-<script src="/blocks/popup/__save-btn/popup__save-btn.js"></script>
+    <script src="index.js"></script>
 </body>
+
 </html>

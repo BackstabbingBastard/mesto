@@ -1,8 +1,4 @@
 .header {
-    /* display: flex;
-    flex-direction: column;
-    gap: 36px; */
-    /* align-self: flex-start; */
     line-height: normal;
 }
 
@@ -12,7 +8,6 @@
         margin: 0 0 0 -8px;
     }
 }
-
 
 @media (min-width: 980px) {
     .header {

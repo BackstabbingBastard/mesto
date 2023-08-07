@@ -1,11 +1,4 @@
 .profile__wrapper {
     display: grid;
-    align-items:center;
-    /* justify-content: center; */
+    align-items: center;
 }
-
-/* @media (min-width: 320px) {
-    .profile__wrapper {
-        margin: 0 auto 0 auto;
-    }
-} */

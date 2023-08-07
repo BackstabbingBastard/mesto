@@ -1,21 +1,17 @@
 .header__line {
     background-image: url(../../../images/vectors/headline.svg);
     width: 100%;
-    /* color: #545454; */
-    /* text-align: bottom;
-    vertical-align: bottom;
-    align-self: center; */
     height: 1px;
 }
 
 @media (min-width: 320px) {
-    .header__line  {
+    .header__line {
         margin-top: 27px;
     }
 }
 
 @media (min-width: 980px) {
-    .header__line  {
+    .header__line {
         margin-top: 36px;
     }
 }
