@@ -1,11 +1,11 @@
 let popup = document.querySelector('.popup');
-let formElement =  document.querySelector('.popup__container'); // Воспользуйтесь методом querySelector()
+let formElement = document.querySelector('.popup__container'); // Воспользуйтесь методом querySelector()
 let nameInput = document.querySelector('.profile__name'); // Воспользуйтесь инструментом .querySelector()
 let jobInput = document.querySelector('.profile__description')// Воспользуйтесь инструментом .querySelector()
-
-function togglePopup() {
-    popup.classList.toggle('popup_opened');
-};
+let profileEditBtn = document.querySelector('.profile__edit-btn');
+let popupSaveBtn = document.querySelector('.popup__save-btn');
+let popupCloseBtn = document.querySelector('.popup__close-btn');
+const popupBtns = [profileEditBtn, popupSaveBtn, popupCloseBtn];
 
 // Обработчик «отправки» формы, хотя пока
 // она никуда отправляться не будет
@@ -23,3 +23,5 @@ function handleFormSubmit (evt) {
 // Прикрепляем обработчик к форме:
 // он будет следить за событием “submit” - «отправка»
 formElement.addEventListener('submit', handleFormSubmit);
+
+popupBtns.forEach((popupBtn) => popupBtn.addEventListener('click', (e) => popup.classList.toggle('popup_opened')));

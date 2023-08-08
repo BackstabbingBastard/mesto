@@ -15,7 +15,6 @@
         box-sizing: border-box;
         border-radius: 2px;
         background: url(../../../images/vectors/plussmall.svg) no-repeat 50%/22px 22px #000;
-        outline: none;
         transition: all .1s linear;
         margin-top: 5px;
     }
