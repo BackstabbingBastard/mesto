@@ -13,7 +13,6 @@
     .profile__info {
         grid-row-gap: 6px;
         margin: 0;
-        display: grid;
         grid-template-columns: 2fr 1fr;
     }
 }
