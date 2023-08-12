@@ -1,11 +1,15 @@
 .header {
     line-height: normal;
+    border-style: none none solid none;
+    border-width: 1px;
+    border-color: rgba(84,84,84, 0.7);
 }
 
 @media (min-width: 320px) {
     .header {
         width: 100%;
         margin: 0 0 0 -8px;
+        padding-bottom: 27px;
     }
 }
 
@@ -13,5 +17,6 @@
     .header {
         width: 880px;
         align-self: center;
+        padding-bottom: 36px;
     }
 }

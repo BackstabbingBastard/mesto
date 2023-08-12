@@ -16,7 +16,6 @@
                 <a href="index.html" class="link"><img src="./images/vectors/vector.svg" alt="Лого с надписью Место"
                         class="header__logo"></a>
             </div>
-            <div class="header__line"></div>
         </header>
 
         <main>
@@ -88,13 +87,15 @@
     </div>
 
     <div class="popup">
-        <form class="popup__container">
-            <h2 class="popup__header">Редактировать профиль</h2>
-            <input type="text" class="popup__name popup__input" value="Жак-Ив Кусто">
-            <input type="text" class="popup__description popup__input" value="Исследователь океана">
-            <button class="popup__save-btn" type="submit">Сохранить</button>
-            <button class="popup__close-btn" type="button" aria-label="Закрыть"></button>
-        </form>
+        <div class="popup__container">
+            <form name="profileData" action="#" method="post">
+                <h2 class="popup__header">Редактировать профиль</h2>
+                <input type="text" class="popup__input popup__input_type_name" placeholder="Имя" name="username" value="">
+                <input type="text" class="popup__input popup__input_type_description" placeholder="О себе" name="userdescription" value="">
+                <button class="popup__save-btn" type="submit">Сохранить</button>
+            </form>
+            <button class="popup__close-btn" type="button" aria-label="Закрыть всплывающее окно"></button>
+        </div>
     </div>
 
     <script src="./scripts/index.js"></script>

@@ -1,11 +1,11 @@
 @media (min-width: 320px) {
-    .popup__name {
+    .popup__input_type_name {
         margin-top: 75px;
     }
 }
 
 @media (min-width: 980px) {
-    .popup__name {
+    .popup__input_type_name {
         margin-top: 54px;
     }
 }
