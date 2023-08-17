@@ -3,12 +3,15 @@ let popupEditProfile = document.querySelector('.popup_type_edit-profile');
 let popupAddPlace = document.querySelector('.popup_type_add-place');
 let profileName = document.querySelector('.profile__name');
 let profileDescription = document.querySelector('.profile__description');
-let formElement = document.querySelector('.profileForm'); // Воспользуйтесь методом querySelector()
+let dataFormElement = document.querySelector('.profileform_type_user-data'); // Воспользуйтесь методом querySelector()
+let AddImgFormElement = document.querySelector('.profileform_type_add-img');
 let nameInput = document.querySelector('.popup__input_type_name'); // Воспользуйтесь инструментом .querySelector()
 let jobInput = document.querySelector('.popup__input_type_description')// Воспользуйтесь инструментом .querySelector()
 let profileEditBtn = document.querySelector('.profile__edit-btn');
 let popupCloseBtn = document.querySelector('.popup__close-btn');
 let imageAddBtn = document.querySelector('.profile__add-btn');
+let imageAddHeader = document.querySelector('.popup__input_type_img-header');
+let imageAddLink = document.querySelector('.popup__input_type_link');
 
 const popupAddCloseBtn = document.querySelector('.popup__close-btn_type_card-add');
 
@@ -96,9 +99,22 @@ function handleFormSubmit (evt) {
     evt.preventDefault(); // Эта строчка отменяет стандартную отправку формы.
     profileName.textContent = nameInput.value;
     profileDescription.textContent = jobInput.value;  
-    closePopup();
+    closePopup(popupEditProfile);
+}
+
+function addImage (evt) {
+    evt.preventDefault(); 
+    let newCardData = {
+      name: imageAddHeader.value,
+      link: imageAddLink.value
+    };
+    cardsSection.prepend(createCardTemplate(newCardData));
+    closePopup(popupAddPlace);
+    imageAddHeader.value = '';
+    imageAddLink.value = '';
 }
 
 // Прикрепляем обработчик к форме:
 // он будет следить за событием “submit” - «отправка»
-formElement.addEventListener('submit', handleFormSubmit);
+dataFormElement.addEventListener('submit', handleFormSubmit);
+AddImgFormElement.addEventListener('submit', addImage);
