@@ -1,4 +1,6 @@
 let popup = document.querySelector('.popup');
+let popupEditProfile = document.querySelector('.popup_type_edit-profile');
+let popupAddPlace = document.querySelector('.popup_type_add-place');
 let profileName = document.querySelector('.profile__name');
 let profileDescription = document.querySelector('.profile__description');
 let formElement = document.querySelector('.profileForm'); // Воспользуйтесь методом querySelector()
@@ -6,6 +8,9 @@ let nameInput = document.querySelector('.popup__input_type_name'); // Воспо
 let jobInput = document.querySelector('.popup__input_type_description')// Воспользуйтесь инструментом .querySelector()
 let profileEditBtn = document.querySelector('.profile__edit-btn');
 let popupCloseBtn = document.querySelector('.popup__close-btn');
+let imageAddBtn = document.querySelector('.profile__add-btn');
+
+const popupAddCloseBtn = document.querySelector('.popup__close-btn_type_card-add');
 
 const initialCards = [
     {
@@ -56,24 +61,33 @@ function createCardTemplate(cardData) {
   return el;
 }
 
-function openPopup() {
-    popup.classList.add('popup_opened');
+function openPopup(chosenPopup) {
+  chosenPopup.classList.add('popup_opened');
 }
 
-function closePopup() {
-    popup.classList.remove('popup_opened');
+function closePopup(chosenPopup) {
+  chosenPopup.classList.remove('popup_opened');
 }
 
 // открыть попап
 profileEditBtn.addEventListener('click', () => {
     nameInput.value = profileName.textContent;
     jobInput.value = profileDescription.textContent;
-    openPopup();
+    openPopup(popupEditProfile);
 });
+
+imageAddBtn.addEventListener('click', () => {
+  openPopup(popupAddPlace);
+});
+
 
 // закрыть без сохранения
 popupCloseBtn.addEventListener('click', () => {
-    closePopup();
+    closePopup(popupEditProfile);
+});
+
+popupAddCloseBtn.addEventListener('click', () => {
+  closePopup(popupAddPlace);
 });
 
 // Обработчик «отправки» формы, хотя пока

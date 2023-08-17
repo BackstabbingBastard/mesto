@@ -37,7 +37,7 @@
         </main>
     </div>
 
-    <div class="popup">
+    <div class="popup popup_type_edit-profile">
         <div class="popup__container">
             <form name="profileData" action="#" method="post" class="profileForm">
                 <h2 class="popup__header">Редактировать профиль</h2>
@@ -46,6 +46,18 @@
                 <button class="popup__save-btn" type="submit">Сохранить</button>
             </form>
             <button class="popup__close-btn" type="button" aria-label="Закрыть всплывающее окно"></button>
+        </div>
+    </div>
+
+    <div class="popup popup_type_add-place">
+        <div class="popup__container">
+            <form name="profileData" action="#" method="post" class="profileForm">
+                <h2 class="popup__header">Новое место</h2>
+                <input type="text" class="popup__input popup__input_type_name" placeholder="Название" name="imagename" value="">
+                <input type="text" class="popup__input popup__input_type_link" placeholder="Ссылка на картинку" name="imagelink" value="">
+                <button class="popup__save-btn" type="submit">Создать</button>
+            </form>
+            <button class="popup__close-btn popup__close-btn_type_card-add" type="button" aria-label="Закрыть всплывающее окно"></button>
         </div>
     </div>
 
