@@ -13,6 +13,7 @@ let imageAddBtn = document.querySelector('.profile__add-btn');
 let imageAddHeader = document.querySelector('.popup__input_type_img-header');
 let imageAddLink = document.querySelector('.popup__input_type_link');
 
+let card = document.querySelector('.card');
 const popupAddCloseBtn = document.querySelector('.popup__close-btn_type_card-add');
 
 const initialCards = [
@@ -53,6 +54,11 @@ function renderCards(initialData) {
   });
 };
 
+
+// function cardHeartAction {
+
+// }
+
 // настраиваем темплейт
 function createCardTemplate(cardData) {
   const el = cardTemplate.content.cloneNode(true);
@@ -61,8 +67,21 @@ function createCardTemplate(cardData) {
   cardHeader.textContent = cardData.name;
   cardImage.setAttribute('src', cardData.link);
 
-  return el;
+  const likeBtn = el.querySelector('.card__like-btn');
+  likeBtn.addEventListener('click', () => {
+    likeBtn.classList.contains('card__like-btn_liked') ? dislikeCard(likeBtn) : likeCard(likeBtn);
+  });
+
+  const deleteBtn = el.querySelector('.card__delete-btn');
+
+  deleteBtn.addEventListener('click', function (e) {
+    let card = e.target.closest('.card');
+    card.remove();
+  });
+
+  return el;  
 }
+
 
 function openPopup(chosenPopup) {
   chosenPopup.classList.add('popup_opened');
@@ -71,6 +90,15 @@ function openPopup(chosenPopup) {
 function closePopup(chosenPopup) {
   chosenPopup.classList.remove('popup_opened');
 }
+
+function likeCard(element) {
+  element.classList.add('card__like-btn_liked');
+}
+
+function dislikeCard(element) {
+  element.classList.remove('card__like-btn_liked');
+}
+
 
 // открыть попап
 profileEditBtn.addEventListener('click', () => {
@@ -118,3 +146,4 @@ function addImage (evt) {
 // он будет следить за событием “submit” - «отправка»
 dataFormElement.addEventListener('submit', handleFormSubmit);
 AddImgFormElement.addEventListener('submit', addImage);
+
