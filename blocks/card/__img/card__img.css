@@ -4,3 +4,8 @@
     width: 282px;
     height: 282px;
 }
+
+.card__img:hover {
+    cursor: pointer;
+    opacity: .9;
+}

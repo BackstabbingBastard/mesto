@@ -12,9 +12,14 @@ let popupCloseBtn = document.querySelector('.popup__close-btn');
 let imageAddBtn = document.querySelector('.profile__add-btn');
 let imageAddHeader = document.querySelector('.popup__input_type_img-header');
 let imageAddLink = document.querySelector('.popup__input_type_link');
+let FullImg = document.querySelector('.popup__full-img');
+let FullImgText = document.querySelector('.popup__img-text');
 
+let popupfullImg = document.querySelector('.popup_type_full-img');
 let card = document.querySelector('.card');
+
 const popupAddCloseBtn = document.querySelector('.popup__close-btn_type_card-add');
+const popupImgCloseBtn = document.querySelector('.popup__close-btn_type_full-img');
 
 const initialCards = [
     {
@@ -72,8 +77,13 @@ function createCardTemplate(cardData) {
     likeBtn.classList.contains('card__like-btn_liked') ? dislikeCard(likeBtn) : likeCard(likeBtn);
   });
 
-  const deleteBtn = el.querySelector('.card__delete-btn');
+  const imgForClick = el.querySelector('.card__img');
+  imgForClick.addEventListener('click', () => {
+    setImgPopup(imgForClick.src, cardData.name);
+    openPopup(popupfullImg);
+  });
 
+  const deleteBtn = el.querySelector('.card__delete-btn');
   deleteBtn.addEventListener('click', function (e) {
     let card = e.target.closest('.card');
     card.remove();
@@ -81,7 +91,6 @@ function createCardTemplate(cardData) {
 
   return el;  
 }
-
 
 function openPopup(chosenPopup) {
   chosenPopup.classList.add('popup_opened');
@@ -111,6 +120,11 @@ imageAddBtn.addEventListener('click', () => {
   openPopup(popupAddPlace);
 });
 
+function setImgPopup(src, text) {
+  FullImg.src = src;
+  FullImgText.textContent = text;
+}
+
 
 // закрыть без сохранения
 popupCloseBtn.addEventListener('click', () => {
@@ -120,6 +134,13 @@ popupCloseBtn.addEventListener('click', () => {
 popupAddCloseBtn.addEventListener('click', () => {
   closePopup(popupAddPlace);
 });
+
+popupImgCloseBtn.addEventListener('click', () => {
+  console.log('popupFullImg', popupfullImg);
+  closePopup(popupfullImg);
+});
+
+
 
 // Обработчик «отправки» формы, хотя пока
 // она никуда отправляться не будет

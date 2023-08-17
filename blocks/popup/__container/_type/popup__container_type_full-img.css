@@ -1,0 +1,20 @@
+.popup__container_type_full-img {
+
+    background-color: transparent;
+    border-radius: 0;
+}
+
+
+@media (min-width: 320px) {
+    .popup__container_type_full-img {
+        width: auto;
+        padding: 0;
+    }
+}
+
+@media (min-width: 980px) {
+    .popup__container_type_full-img {
+        padding: 0;
+        width: auto;
+    }
+}
