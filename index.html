@@ -37,9 +37,9 @@
         </main>
     </div>
 
-    <div class="popup">
+    <div class="popup popup_type_edit-profile">
         <div class="popup__container">
-            <form name="profileData" action="#" method="post" class="profileForm">
+            <form name="profileData" action="#" method="post" class="profileform_type_user-data">
                 <h2 class="popup__header">Редактировать профиль</h2>
                 <input type="text" class="popup__input popup__input_type_name" placeholder="Имя" name="username" value="">
                 <input type="text" class="popup__input popup__input_type_description" placeholder="О себе" name="userdescription" value="">
@@ -49,14 +49,37 @@
         </div>
     </div>
 
+    <div class="popup popup_type_add-place">
+        <div class="popup__container">
+            <form name="addImageData" method="post" class="profileform_type_add-img">
+                <h2 class="popup__header">Новое место</h2>
+                <input type="text" class="popup__input popup__input_type_img-header" placeholder="Название" name="imagename" value="">
+                <input type="text" class="popup__input popup__input_type_link" placeholder="Ссылка на картинку" name="imagelink" value="">
+                <button class="popup__save-btn" type="submit">Создать</button>
+            </form>
+            <button class="popup__close-btn popup__close-btn_type_card-add" type="button" aria-label="Закрыть всплывающее окно"></button>
+        </div>
+    </div>
+
+    <div class="popup popup_type_full-img">
+            <div class="popup__container popup__container_type_full-img">
+                <img src=""
+                    alt="Пользовательское изображение" class="popup__full-img">
+                    <p class="popup__img-text">Карачаево-Черкессия</p>
+                
+                <button class="popup__close-btn popup__close-btn_type_full-img" type="button" aria-label="Закрыть всплывающее окно"></button>
+            </div>
+    </div>
+
     <template id="cardTemplate">
         <article class="card">
             <img src=""
-                alt="template" class="card__img">
+                alt="Пользовательское изображение" class="card__img">
             <div class="card__wrapper">
                 <h2 class="card__header"></h2>
-                <button class="card__like-btn" type="button" aria-label="Понравилось"></button>
+                <button class="card__like-btn" type="button" aria-label="Мне нравится"></button>
             </div>
+            <button class="card__delete-btn" type="button" aria-label="Удалить карточку"></button>
         </article>
     </template>
 
