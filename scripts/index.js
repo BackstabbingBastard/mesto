@@ -28,8 +28,8 @@ function renderCards(initialData) {
 // настраиваем темплейт
 function createCardTemplate(cardData) {
   const el = cardTemplate.content.cloneNode(true);
-  let cardHeader = el.querySelector('.card__header');
-  let cardImage = el.querySelector('.card__img');
+  const cardHeader = el.querySelector('.card__header');
+  const cardImage = el.querySelector('.card__img');
   cardHeader.textContent = cardData.name;
   cardImage.setAttribute('src', cardData.link);
   cardImage.setAttribute('alt', 'Изображение загруженное пользователем');
@@ -92,8 +92,7 @@ function handleAddImageSubmit(evt) {
   };
   cardsSection.prepend(createCardTemplate(newCardData));
   closePopup(popupAddPlace);
-  imageAddHeader.value = '';
-  imageAddLink.value = '';
+  addImgFormElement.reset();
 }
 
 
