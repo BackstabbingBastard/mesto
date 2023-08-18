@@ -41,8 +41,10 @@
         <div class="popup__container">
             <form name="profileData" action="#" method="post" class="profileform profileform_type_user-data">
                 <h2 class="popup__header">Редактировать профиль</h2>
-                <input type="text" class="popup__input popup__input_type_name" placeholder="Имя" name="username" value="">
-                <input type="text" class="popup__input popup__input_type_description" placeholder="О себе" name="userdescription" value="">
+                <input type="text" class="popup__input popup__input_type_name" placeholder="Имя" name="username"
+                    value="">
+                <input type="text" class="popup__input popup__input_type_description" placeholder="О себе"
+                    name="userdescription" value="">
                 <button class="popup__save-btn" type="submit">Сохранить</button>
             </form>
             <button class="popup__close-btn" type="button" aria-label="Закрыть всплывающее окно"></button>
@@ -53,28 +55,32 @@
         <div class="popup__container">
             <form name="addImageData" method="post" class="profileform profileform_type_add-img">
                 <h2 class="popup__header">Новое место</h2>
-                <input type="text" class="popup__input popup__input_type_img-header" placeholder="Название" name="imagename" value="">
-                <input type="text" class="popup__input popup__input_type_link" placeholder="Ссылка на картинку" name="imagelink" value="">
+                <input type="text" class="popup__input popup__input_type_img-header" placeholder="Название"
+                    name="imagename" value="">
+                <input type="text" class="popup__input popup__input_type_link" placeholder="Ссылка на картинку"
+                    name="imagelink" value="">
                 <button class="popup__save-btn" type="submit">Создать</button>
             </form>
-            <button class="popup__close-btn popup__close-btn_type_card-add" type="button" aria-label="Закрыть всплывающее окно"></button>
+            <button class="popup__close-btn popup__close-btn_type_card-add" type="button"
+                aria-label="Закрыть всплывающее окно"></button>
         </div>
     </div>
 
     <div class="popup popup_type_full-img">
-            <div class="popup__container popup__container_type_full-img">
-                <img src="https://images.unsplash.com/photo-1531259683007-016a7b628fc3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=282&q=282"
-                     class="popup__full-img">
-                    <p class="popup__img-text">Карачаево-Черкессия</p>
-                
-                <button class="popup__close-btn popup__close-btn_type_full-img" type="button" aria-label="Закрыть всплывающее окно"></button>
-            </div>
+        <div class="popup__container popup__container_type_full-img">
+            <img src="https://images.unsplash.com/photo-1531259683007-016a7b628fc3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=282&q=282"
+                alt="Пользовательское изображение" class="popup__full-img">
+            <p class="popup__img-text">Карачаево-Черкессия</p>
+
+            <button class="popup__close-btn popup__close-btn_type_full-img" type="button"
+                aria-label="Закрыть всплывающее окно"></button>
+        </div>
     </div>
 
     <template id="cardTemplate">
         <article class="card">
             <img src="https://images.unsplash.com/photo-1531259683007-016a7b628fc3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=282&q=282"
-                 class="card__img">
+                alt="Пользовательское изображение" class="card__img">
             <div class="card__wrapper">
                 <h2 class="card__header"></h2>
                 <button class="card__like-btn" type="button" aria-label="Мне нравится"></button>
