@@ -1,6 +1,6 @@
 const popupEditProfile = document.querySelector('.popup_type_edit-profile');
 const popupAddPlace = document.querySelector('.popup_type_add-place');
-const popupfullImg = document.querySelector('.popup_type_full-img')
+const popupFullImg = document.querySelector('.popup_type_full-img')
 const profileName = document.querySelector('.profile__name');
 const profileDescription = document.querySelector('.profile__description');
 const dataFormElement = document.querySelector('.profileform_type_user-data'); // Воспользуйтесь методом querySelector()
@@ -42,7 +42,7 @@ function createCardTemplate(cardData) {
   const imgForClick = el.querySelector('.card__img');
   imgForClick.addEventListener('click', () => {
     setImgPopup(imgForClick.src, cardData.name);
-    openPopup(popupfullImg);
+    openPopup(popupFullImg);
   });
 
   const deleteBtn = el.querySelector('.card__delete-btn');
