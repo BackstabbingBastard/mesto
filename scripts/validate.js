@@ -12,13 +12,12 @@ const setSubmitButtonState = (isActive, button) => {
 
 const validateInput = (inputElement) => {
     const errorElement = document.querySelector(`#${inputElement.id}-error`);
-      if(inputElement.checkValidity()) {
+    if (inputElement.checkValidity()) {
         inputElement.classList.remove('popup__input_invalid');
         errorElement.textContent = '';
     } else {
         inputElement.classList.add('popup__input_invalid');
         errorElement.textContent = inputElement.validationMessage;
-
     }
 }
 
@@ -32,10 +31,8 @@ const validateForm = (evt) => {
 
     const button = form.querySelector('.popup__save-btn');
 
-
-    if(form.checkValidity()) {
+    if (form.checkValidity()) {
         setSubmitButtonState(true, button);
-
     } else {
         setSubmitButtonState(false, button);
     }
@@ -45,9 +42,3 @@ allForms.forEach(form => {
     form.addEventListener('input', validateForm);
     form.addEventListener('submit', validateForm);
 });
-
-
-
-
-
-
