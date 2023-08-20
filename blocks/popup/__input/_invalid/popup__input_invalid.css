@@ -1,0 +1,4 @@
+.popup__input_invalid {
+    border-color: red;
+    border-style: none none solid none;
+}

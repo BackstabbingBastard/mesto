@@ -16,6 +16,7 @@ const imageAddHeader = document.querySelector('.popup__input_type_img-header');
 const imageAddLink = document.querySelector('.popup__input_type_link');
 const fullImg = document.querySelector('.popup__full-img');
 const fullImgText = document.querySelector('.popup__img-text');
+const allPopup = document.querySelectorAll('.popup');
 
 
 // создаем 6 карточек при запуске страницы
@@ -112,6 +113,18 @@ popupCloseBtns.forEach(button => {
   const buttonsPopup = button.closest('.popup'); // нашли родителя с нужным классом
   button.addEventListener('click', () => closePopup(buttonsPopup)); // закрыли попап
 });  
+
+allPopup.forEach(popup => {
+  popup.addEventListener('click', (evt) => {
+    if (evt.currentTarget === evt.target) {
+      closePopup(popup);     
+  }});
+  document.addEventListener('keydown', function(evt) {
+    if (evt.key === 'Escape') {
+      closePopup(popup); 
+    }});
+});
+
 
 renderCards(initialCards);
 dataFormElement.addEventListener('submit', handleProfileFormSubmit);
