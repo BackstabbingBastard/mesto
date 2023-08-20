@@ -1,5 +1,12 @@
 const allForms = Array.from(document.forms);
 
+function enableValidation(strangeData) {
+    allForms.forEach(form => {
+        form.addEventListener('input', validateForm);
+        form.addEventListener('submit', validateForm);
+    });
+}
+
 const setSubmitButtonState = (isActive, button) => {
     if (isActive) {
         button.removeAttribute('disabled');
@@ -24,7 +31,6 @@ const validateInput = (inputElement) => {
 const validateForm = (evt) => {
     const form = evt.target.closest('.profileform');
     let allFormInput = form.querySelectorAll('.popup__input');
-    console.log('все инпуты формы:', allFormInput);
     allFormInput.forEach(input => {
         validateInput(input);
     });
@@ -38,7 +44,11 @@ const validateForm = (evt) => {
     }
 };
 
-allForms.forEach(form => {
-    form.addEventListener('input', validateForm);
-    form.addEventListener('submit', validateForm);
-});
+enableValidation({
+    formSelector: '.profileform',
+    inputSelector: '.popup__input',
+    submitButtonSelector: '.popup__save-btn',
+    inactiveButtonClass: '.popup__save-btn_inactive',
+    inputErrorClass: '.popup__input_invalid',
+    errorClass: 'popup__error'
+  }); 
