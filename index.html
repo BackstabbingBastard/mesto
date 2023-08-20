@@ -41,10 +41,12 @@
         <div class="popup__container">
             <form name="profileData" action="#" method="post" class="profileform profileform_type_user-data">
                 <h2 class="popup__header">Редактировать профиль</h2>
-                <input type="text" class="popup__input popup__input_type_name" placeholder="Имя" name="username"
-                    value="">
+                <input type="text" class="popup__input popup__input_type_name" placeholder="Имя" id="username" name="username"
+                    value="Жак-Ив Кусто" minlength="2" maxlength="40" required>
+                    <span id="username-error" class="error"></span>
                 <input type="text" class="popup__input popup__input_type_description" placeholder="О себе"
-                    name="userdescription" value="">
+                    name="userdescription" id="userdescription" value="Исследователь океана" minlength="2" maxlength="200" required>
+                    <span id="userdescription-error" class="error"></span>
                 <button class="popup__save-btn" type="submit">Сохранить</button>
             </form>
             <button class="popup__close-btn" type="button" aria-label="Закрыть всплывающее окно"></button>
@@ -56,10 +58,12 @@
             <form name="addImageData" method="post" class="profileform profileform_type_add-img">
                 <h2 class="popup__header">Новое место</h2>
                 <input type="text" class="popup__input popup__input_type_img-header" placeholder="Название"
-                    name="imagename" value="">
-                <input type="text" class="popup__input popup__input_type_link" placeholder="Ссылка на картинку"
-                    name="imagelink" value="">
-                <button class="popup__save-btn" type="submit">Создать</button>
+                    name="imagename" id="imagename" minlength="2" maxlength="30" value="" required>
+                    <span id="imagename-error" class="error"></span>
+                <input type="url" class="popup__input popup__input_type_link" placeholder="Ссылка на картинку"
+                    name="imagelink" id="imagelink" value="" required>
+                    <span id="imagelink-error" class="error"></span>
+                <button class="popup__save-btn popup__save-btn_inactive" type="submit" disabled>Создать</button>
             </form>
             <button class="popup__close-btn popup__close-btn_type_card-add" type="button"
                 aria-label="Закрыть всплывающее окно"></button>
@@ -91,6 +95,7 @@
 
     <script src="./scripts/initcards.js"></script>
     <script src="./scripts/index.js"></script>
+    <script src="./scripts/validate.js"></script>
 </body>
 
 </html>
