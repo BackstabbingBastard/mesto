@@ -32,7 +32,7 @@ function createCardTemplate(cardData) {
   const cardImage = el.querySelector('.card__img');
   cardHeader.textContent = cardData.name;
   cardImage.setAttribute('src', cardData.link);
-  cardImage.setAttribute('alt', 'Изображение загруженное пользователем');
+  cardImage.setAttribute('alt', `Изображение загруженное пользователем: ${cardHeader.textContent}`);
 
   const likeBtn = el.querySelector('.card__like-btn');
   likeBtn.addEventListener('click', () => {
@@ -72,7 +72,7 @@ function likeCard(element) {
 function setImgPopup(src, text) {
   fullImg.src = src;
   fullImgText.textContent = text;
-  fullImg.alt = 'Изображение загруженное пользователем';
+  fullImg.alt = `Изображение загруженное пользователем: ${text}`;
 }
 
 // Обработчик «отправки» формы, хотя пока
