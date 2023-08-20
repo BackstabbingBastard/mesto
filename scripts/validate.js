@@ -28,13 +28,14 @@ const setSubmitButtonState = (isActive, button) => {
 
 const validateInput = (inputElement) => {
     const errorElement = document.querySelector(`#${inputElement.id}-error`);
+    const localButton = inputElement.closest(enableValidation.formSelector).querySelector(enableValidation.submitButtonSelector);
     if (inputElement.checkValidity()) {
         inputElement.classList.remove(enableValidation.inputErrorClass);
         errorElement.textContent = '';
+        setSubmitButtonState(true, localButton);
     } else {
         inputElement.classList.add(enableValidation.inputErrorClass);
         errorElement.textContent = inputElement.validationMessage;
-        const localButton = inputElement.closest(enableValidation.formSelector).querySelector(enableValidation.submitButtonSelector);
         setSubmitButtonState(false, localButton);
     }
 }
