@@ -1,5 +1,18 @@
 const allForms = Array.from(document.forms);
 
+
+// enableValidation({
+//     formSelector: '.popup__form',
+//     inputSelector: '.popup__input',
+//     submitButtonSelector: '.popup__button',
+//     inactiveButtonClass: 'popup__save-btn_inactive',
+//     inputErrorClass: 'popup__input_type_error',
+//     errorClass: 'popup__error_visible'
+//   }); 
+
+
+
+
 const setSubmitButtonState = (isActive, button) => {
     if (isActive) {
         button.removeAttribute('disabled');
@@ -24,7 +37,6 @@ const validateInput = (inputElement) => {
 const validateForm = (evt) => {
     const form = evt.target.closest('.profileform');
     let allFormInput = form.querySelectorAll('.popup__input');
-    console.log('все инпуты формы:', allFormInput);
     allFormInput.forEach(input => {
         validateInput(input);
     });
