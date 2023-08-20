@@ -1,14 +1,12 @@
 const allForms = Array.from(document.forms);
 
-function enableValidation(strangeData) {
-    enableValidation.formSelector = strangeData['formSelector'];
-    enableValidation.inputSelector = strangeData['inputSelector'];
-    enableValidation.submitButtonSelector = strangeData['submitButtonSelector'];
-    enableValidation.inactiveButtonClass = strangeData['inactiveButtonClass'];
-    enableValidation.inputErrorClass = strangeData['inputErrorClass'];
-    enableValidation.errorClass = strangeData['errorClass'];
-
-    console.log(enableValidation.inactiveButtonClass);
+function enableValidation(settingsData) {
+    enableValidation.formSelector = settingsData['formSelector'];
+    enableValidation.inputSelector = settingsData['inputSelector'];
+    enableValidation.submitButtonSelector = settingsData['submitButtonSelector'];
+    enableValidation.inactiveButtonClass = settingsData['inactiveButtonClass'];
+    enableValidation.inputErrorClass = settingsData['inputErrorClass'];
+    enableValidation.errorClass = settingsData['errorClass'];
 
     const allForms = document.querySelectorAll(enableValidation.formSelector);
 
@@ -30,12 +28,15 @@ const setSubmitButtonState = (isActive, button) => {
 
 const validateInput = (inputElement) => {
     const errorElement = document.querySelector(`#${inputElement.id}-error`);
+    const localButton = inputElement.closest(enableValidation.formSelector).querySelector(enableValidation.submitButtonSelector);
     if (inputElement.checkValidity()) {
         inputElement.classList.remove(enableValidation.inputErrorClass);
         errorElement.textContent = '';
+        setSubmitButtonState(true, localButton);
     } else {
         inputElement.classList.add(enableValidation.inputErrorClass);
         errorElement.textContent = inputElement.validationMessage;
+        setSubmitButtonState(false, localButton);
     }
 }
 
