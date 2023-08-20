@@ -26,6 +26,7 @@ function renderCards(initialData) {
   });
 };
 
+
 // настраиваем темплейт
 function createCardTemplate(cardData) {
   const el = cardTemplate.content.cloneNode(true);
@@ -58,8 +59,27 @@ function deleteCard(chosenCardData) {
   chosenCardData.remove();
 }
 
+function pressEsc(evt) {
+  if (evt.key === 'Escape') {
+    allPopup.forEach(popup => {
+      if(popup.classList.contains('popup_opened')) {
+        closePopup(popup);
+      }
+    });
+    deleteEscEvent();
+  }
+}
+
+function deleteEscEvent() {
+  document.removeEventListener('keydown', pressEsc);
+}
+
 function openPopup(chosenPopup) {
   chosenPopup.classList.add('popup_opened');
+  if(chosenPopup.classList.contains('popup_opened')) 
+  {
+    document.addEventListener('keydown', pressEsc);
+  }
 }
 
 function closePopup(chosenPopup) {
@@ -108,6 +128,9 @@ profileEditBtn.addEventListener('click', (e) => {
 });
 
 imageAddBtn.addEventListener('click', () => {
+  popupAddPlace.querySelectorAll(enableValidation.inputSelector).forEach(input => {
+    validateInput(input);
+});
   openPopup(popupAddPlace);
 });
 
@@ -122,12 +145,7 @@ allPopup.forEach(popup => {
     if (evt.currentTarget === evt.target) {
       closePopup(popup);     
   }});
-  document.addEventListener('keydown', function(evt) {
-    if (evt.key === 'Escape') {
-      closePopup(popup); 
-    }});
 });
-
 
 renderCards(initialCards);
 dataFormElement.addEventListener('submit', handleProfileFormSubmit);

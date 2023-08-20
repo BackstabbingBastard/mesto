@@ -1,14 +1,12 @@
 const allForms = Array.from(document.forms);
 
-function enableValidation(strangeData) {
-    enableValidation.formSelector = strangeData['formSelector'];
-    enableValidation.inputSelector = strangeData['inputSelector'];
-    enableValidation.submitButtonSelector = strangeData['submitButtonSelector'];
-    enableValidation.inactiveButtonClass = strangeData['inactiveButtonClass'];
-    enableValidation.inputErrorClass = strangeData['inputErrorClass'];
-    enableValidation.errorClass = strangeData['errorClass'];
-
-    console.log(enableValidation.inactiveButtonClass);
+function enableValidation(settingsData) {
+    enableValidation.formSelector = settingsData['formSelector'];
+    enableValidation.inputSelector = settingsData['inputSelector'];
+    enableValidation.submitButtonSelector = settingsData['submitButtonSelector'];
+    enableValidation.inactiveButtonClass = settingsData['inactiveButtonClass'];
+    enableValidation.inputErrorClass = settingsData['inputErrorClass'];
+    enableValidation.errorClass = settingsData['errorClass'];
 
     const allForms = document.querySelectorAll(enableValidation.formSelector);
 
@@ -36,6 +34,8 @@ const validateInput = (inputElement) => {
     } else {
         inputElement.classList.add(enableValidation.inputErrorClass);
         errorElement.textContent = inputElement.validationMessage;
+        const localButton = inputElement.closest(enableValidation.formSelector).querySelector(enableValidation.submitButtonSelector);
+        setSubmitButtonState(false, localButton);
     }
 }
 
