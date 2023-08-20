@@ -1,17 +1,11 @@
 const allForms = Array.from(document.forms);
 
-
-// enableValidation({
-//     formSelector: '.popup__form',
-//     inputSelector: '.popup__input',
-//     submitButtonSelector: '.popup__button',
-//     inactiveButtonClass: 'popup__save-btn_inactive',
-//     inputErrorClass: 'popup__input_type_error',
-//     errorClass: 'popup__error_visible'
-//   }); 
-
-
-
+function enableValidation(strangeData) {
+    allForms.forEach(form => {
+        form.addEventListener('input', validateForm);
+        form.addEventListener('submit', validateForm);
+    });
+}
 
 const setSubmitButtonState = (isActive, button) => {
     if (isActive) {
@@ -50,7 +44,11 @@ const validateForm = (evt) => {
     }
 };
 
-allForms.forEach(form => {
-    form.addEventListener('input', validateForm);
-    form.addEventListener('submit', validateForm);
-});
+enableValidation({
+    formSelector: '.profileform',
+    inputSelector: '.popup__input',
+    submitButtonSelector: '.popup__save-btn',
+    inactiveButtonClass: '.popup__save-btn_inactive',
+    inputErrorClass: '.popup__input_invalid',
+    errorClass: 'popup__error'
+  }); 
