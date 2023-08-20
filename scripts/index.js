@@ -98,9 +98,12 @@ function handleAddImageSubmit(evt) {
 
 
 // попапы
-profileEditBtn.addEventListener('click', () => {
+profileEditBtn.addEventListener('click', (e) => {
   nameInput.value = profileName.textContent;
   jobInput.value = profileDescription.textContent;
+  popupEditProfile.querySelectorAll(enableValidation.inputSelector).forEach(input => {
+    validateInput(input);
+});
   openPopup(popupEditProfile);
 });
 
