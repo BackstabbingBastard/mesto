@@ -61,11 +61,8 @@ function deleteCard(chosenCardData) {
 
 function pressEsc(evt) {
   if (evt.key === 'Escape') {
-    allPopup.forEach(popup => {
-      if(popup.classList.contains('popup_opened')) {
-        closePopup(popup);
-      }
-    });
+    const openedPopup = document.querySelector('.popup_opened');
+    closePopup(openedPopup);
     deleteEscEvent();
   }
 }
@@ -129,11 +126,7 @@ profileEditBtn.addEventListener('click', (e) => {
 
 imageAddBtn.addEventListener('click', () => {
   popupAddPlace.querySelectorAll(enableValidation.inputSelector).forEach(input => {
-    // validateInput(input);
-
-    // console.log(enableValidation.submitButtonSelector);
     checkFormValidity(popupAddPlace.querySelector(enableValidation.formSelector), popupAddPlace.querySelector(enableValidation.submitButtonSelector));
-    
 });
   openPopup(popupAddPlace);
 });
