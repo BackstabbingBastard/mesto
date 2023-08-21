@@ -63,7 +63,6 @@ function pressEsc(evt) {
   if (evt.key === 'Escape') {
     const openedPopup = document.querySelector('.popup_opened');
     closePopup(openedPopup);
-    deleteEscEvent();
   }
 }
 
@@ -81,6 +80,7 @@ function openPopup(chosenPopup) {
 
 function closePopup(chosenPopup) {
   chosenPopup.classList.remove('popup_opened');
+  deleteEscEvent();
 }
 
 function likeCard(element) {
