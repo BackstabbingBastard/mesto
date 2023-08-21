@@ -1,5 +1,3 @@
-const allForms = Array.from(document.forms);
-
 function enableValidation(settingsData) {
     enableValidation.formSelector = settingsData['formSelector'];
     enableValidation.inputSelector = settingsData['inputSelector'];
@@ -41,7 +39,7 @@ const validateInput = (inputElement) => {
 }
 
 const validateForm = (evt) => {
-    const form = evt.target.closest('.profileform');
+    const form = evt.target.closest(enableValidation.formSelector);
     const allFormInput = form.querySelectorAll(enableValidation.inputSelector);
     allFormInput.forEach(input => {
         validateInput(input);
@@ -49,12 +47,16 @@ const validateForm = (evt) => {
 
     const button = form.querySelector(enableValidation.submitButtonSelector);
 
+    checkFormValidity(form, button);
+};
+
+function checkFormValidity(form, button) {
     if (form.checkValidity()) {
         setSubmitButtonState(true, button);
     } else {
         setSubmitButtonState(false, button);
     }
-};
+}
 
 enableValidation({
     formSelector: '.profileform',

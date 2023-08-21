@@ -39,7 +39,7 @@
 
     <div class="popup popup_type_edit-profile">
         <div class="popup__container">
-            <form name="profileData" action="#" method="post" class="profileform profileform_type_user-data">
+            <form name="profileData" action="#" method="post" class="profileform profileform_type_user-data" novalidate>
                 <h2 class="popup__header">Редактировать профиль</h2>
                 <input type="text" class="popup__input popup__input_type_name" placeholder="Имя" id="username" name="username"
                     value="Жак-Ив Кусто" minlength="2" maxlength="40" required>
@@ -55,7 +55,7 @@
 
     <div class="popup popup_type_add-place">
         <div class="popup__container">
-            <form name="addImageData" method="post" class="profileform profileform_type_add-img">
+            <form name="addImageData" method="post" class="profileform profileform_type_add-img" novalidate>
                 <h2 class="popup__header">Новое место</h2>
                 <input type="text" class="popup__input popup__input_type_img-header" placeholder="Название"
                     name="imagename" id="imagename" minlength="2" maxlength="30" value="" required>
