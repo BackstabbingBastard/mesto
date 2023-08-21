@@ -129,7 +129,11 @@ profileEditBtn.addEventListener('click', (e) => {
 
 imageAddBtn.addEventListener('click', () => {
   popupAddPlace.querySelectorAll(enableValidation.inputSelector).forEach(input => {
-    validateInput(input);
+    // validateInput(input);
+
+    // console.log(enableValidation.submitButtonSelector);
+    checkFormValidity(popupAddPlace.querySelector(enableValidation.formSelector), popupAddPlace.querySelector(enableValidation.submitButtonSelector));
+    
 });
   openPopup(popupAddPlace);
 });
